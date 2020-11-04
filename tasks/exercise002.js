@@ -3,7 +3,13 @@
 // More examples in the test cases below.
 
 function past(h, m, s){
-    // Your code here!
+    let hoursToMiliseconds = h * 60 * 60 * 1000;
+    let minutesToMiliseconds = m * 60 * 1000;
+    let secondsToMiliseconds = s * 1000;
+
+    let result = hoursToMiliseconds + minutesToMiliseconds + secondsToMiliseconds;
+
+    return result;
 }
 
 module.exports = {
