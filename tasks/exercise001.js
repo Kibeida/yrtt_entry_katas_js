@@ -7,7 +7,17 @@
 
 function singles(arr){
     if (arr === undefined) throw new Error("array is required");
-    // Your code here!
+
+    let uniqueArray = arr.filter(item => arr.lastIndexOf(item) == arr.indexOf(item));
+    let sum = 0;
+    
+    if (uniqueArray.length > 1) {
+        sum = uniqueArray.reduce(function(total, amount){
+            return total + amount
+        });
+    }
+
+    return sum;
 }
 
 module.exports = {
